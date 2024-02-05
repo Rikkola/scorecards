@@ -6,6 +6,8 @@ import { GeneralSettings } from '@app/Settings/General/GeneralSettings';
 import { ProfileSettings } from '@app/Settings/Profile/ProfileSettings';
 import { NotFound } from '@app/NotFound/NotFound';
 import { useDocumentTitle } from '@app/utils/useDocumentTitle';
+import {ScoreCardGroupPage} from "@app/Dashboard/ScoreCardGroupPage";
+import {CardEditor} from "@app/Editor/CardEditor";
 
 let routeFocusTimer: number;
 export interface IAppRoute {
@@ -35,11 +37,11 @@ const routes: AppRouteConfig[] = [
     title: 'PatternFly Seed | Main Dashboard',
   },
   {
-    component: Support,
+    component: CardEditor,
     exact: true,
-    label: 'Support',
-    path: '/support',
-    title: 'PatternFly Seed | Support Page',
+    label: 'CardEditor',
+    path: '/cardEditor',
+    title: 'Card Editing',
   },
   {
     label: 'Settings',
@@ -59,6 +61,13 @@ const routes: AppRouteConfig[] = [
         title: 'PatternFly Seed | Profile Settings',
       },
     ],
+  },
+  {
+    component: ScoreCardGroupPage,
+    exact: true,
+    label: 'ScoreCardGroupPage',
+    path: '/ScoreCardGroupPage',
+    title: 'Score Card Groups ',
   },
 ];
 
